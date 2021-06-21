@@ -1,7 +1,5 @@
 Information About the Post
-<ul>
-  <li> <%= @author.name %></li>
-  <li> <%= @author.hometown %></li>
-</ul>
+<%= render partial: 'authors/author', locals: {post_author: @author} %>
+<%# first key value pair notes which partial to render. second key value pair notes what to use as local variables in the partial %>
 <%= @post.title %>
 <%= @post.content %>
